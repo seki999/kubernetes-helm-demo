@@ -1,15 +1,24 @@
 Kubernetes (以及 Helm) 学习指南
 测验 (简答题)
-什么是 Kubernetes，它解决了什么问题？ Kubernetes 是一个容器编排系统，解决了传统应用部署和管理中资源分配不均、手动维护繁琐等问题，实现了应用的自动化部署、扩展和管理。
-Kubernetes 的核心架构组件有哪些？它们各自的作用是什么？ 主要包括 Control Plane (负责资源调度和管理) 和 Node (运行应用实例)。Control Plane 可以看作是 Kubernetes 的大脑，负责整个集群的控制和管理，而 Node 则负责运行实际的应用容器。
-什么是 Pod？它与 Docker Container 有什么关系？ Pod 是 Kubernetes 中最小的部署单元，包含一个或多个 Docker Container。Pod 可以看作是虚拟机，而 Docker Container 是运行在这个虚拟机中的应用。
-Deployment 在 Kubernetes 中扮演什么角色？ Deployment 用于管理多个相同的 Pod 实例，实现应用的动态水平扩展和自我修复。
-Service 的作用是什么？ Kubernetes 为什么要引入 Service 的概念？ Service 类似于内部虚拟路由器，用于在 Kubernetes 集群内部为 Pod 提供稳定的网络访问入口，解决了 Pod IP 动态分配的问题。
-Ingress Controller 的作用是什么？它与 Service 有什么区别？ Ingress Controller 类似于外部虚拟路由器，用于将外部流量路由到集群内部的 Service。Service 负责集群内部的服务发现和负载均衡，Ingress Controller 则负责集群外部的流量接入。
-ConfigMap 和 Secret 的作用分别是什么？为什么要使用它们？ ConfigMap 用于存储明文配置信息，Secret 用于存储敏感信息（如密码）。使用它们可以将应用配置与代码分离，方便动态调整和安全管理。
-什么是 Namespace？它解决了什么问题？ Namespace 用于在 Kubernetes 集群中对资源进行逻辑隔离，可以区分不同的项目或环境，避免资源冲突。
-什么是 Helm？它解决了什么问题？ Helm 是 Kubernetes 的包管理工具，解决了 Kubernetes 资源配置复杂、难以维护的问题，可以将一组 Kubernetes 资源打包成 Chart 进行部署和管理。
-Helm Chart 的主要组成部分有哪些？它们的作用分别是什么？ 主要包括：
+①什么是 Kubernetes，它解决了什么问题？ 
+Kubernetes 是一个容器编排系统，解决了传统应用部署和管理中资源分配不均、手动维护繁琐等问题，实现了应用的自动化部署、扩展和管理。
+②Kubernetes 的核心架构组件有哪些？它们各自的作用是什么？ 
+主要包括 Control Plane (负责资源调度和管理) 和 Node (运行应用实例)。Control Plane 可以看作是 Kubernetes 的大脑，负责整个集群的控制和管理，而 Node 则负责运行实际的应用容器。
+③什么是 Pod？它与 Docker Container 有什么关系？ 
+Pod 是 Kubernetes 中最小的部署单元，包含一个或多个 Docker Container。Pod 可以看作是虚拟机，而 Docker Container 是运行在这个虚拟机中的应用。
+④Deployment 在 Kubernetes 中扮演什么角色？ 
+Deployment 用于管理多个相同的 Pod 实例，实现应用的动态水平扩展和自我修复。
+⑤Service 的作用是什么？ Kubernetes 为什么要引入 Service 的概念？ 
+Service 类似于内部虚拟路由器，用于在 Kubernetes 集群内部为 Pod 提供稳定的网络访问入口，解决了 Pod IP 动态分配的问题。
+⑥Ingress Controller 的作用是什么？它与 Service 有什么区别？ 
+Ingress Controller 类似于外部虚拟路由器，用于将外部流量路由到集群内部的 Service。Service 负责集群内部的服务发现和负载均衡，Ingress Controller 则负责集群外部的流量接入。
+⑦ConfigMap 和 Secret 的作用分别是什么？为什么要使用它们？ 
+ConfigMap 用于存储明文配置信息，Secret 用于存储敏感信息（如密码）。使用它们可以将应用配置与代码分离，方便动态调整和安全管理。
+⑧什么是 Namespace？它解决了什么问题？ 
+Namespace 用于在 Kubernetes 集群中对资源进行逻辑隔离，可以区分不同的项目或环境，避免资源冲突。
+⑨什么是 Helm？它解决了什么问题？ 
+Helm 是 Kubernetes 的包管理工具，解决了 Kubernetes 资源配置复杂、难以维护的问题，可以将一组 Kubernetes 资源打包成 Chart 进行部署和管理。
+⑩Helm Chart 的主要组成部分有哪些？它们的作用分别是什么？ 主要包括：
 Chart.yaml: 定义 Chart 的基本信息。
 templates/: 存放 Kubernetes 资源的 YAML 模板文件。
 values.yaml: 存放 Chart 的默认变量值。
