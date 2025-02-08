@@ -1,4 +1,5 @@
-下面我将详细介绍这个仓库（[kubernetes‑helm‑demo](https://github.com/seki999/kubernetes-helm-demo/tree/main)）中的主要文件和目录，以及它们各自的作用。总体来说，该仓库演示了如何使用 Helm 将一个简单的 Web 应用部署到 Kubernetes 集群中，整个流程包括：用 Dockerfile 构建镜像、用静态 HTML 文件构成前端页面、以及用 Helm Chart 定义 Kubernetes 资源对象。下面分目录逐一说明：
+下面是详细介绍这个仓库（[kubernetes‑helm‑demo](https://github.com/seki999/kubernetes-helm-demo/tree/main)）中的主要文件和目录，以及它们各自的作用。
+总体来说，该仓库演示了如何使用 Helm 将一个简单的 Web 应用部署到 Kubernetes 集群中，整个流程包括：用 Dockerfile 构建镜像、用静态 HTML 文件构成前端页面、以及用 Helm Chart 定义 Kubernetes 资源对象。下面分目录逐一说明：
 
 ---
 
@@ -75,7 +76,3 @@ charts/
 3. **部署到 Kubernetes**：使用 Helm 命令（例如 `helm install`）将打包好的 Helm Chart 部署到 Kubernetes 集群，实现应用上线。
 
 通过这个 demo，你可以学习到如何使用 Helm 管理 Kubernetes 应用的部署，以及如何组织项目结构以便实现自动化构建和部署流程。
-
----
-
-以上就是对仓库中每个主要文件和目录的详细说明，希望能帮助你更好地理解整个项目的结构和各部分的功能。如果有任何疑问，欢迎继续讨论！
